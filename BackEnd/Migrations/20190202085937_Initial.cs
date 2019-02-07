@@ -15,7 +15,7 @@ namespace BackEnd.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(maxLength: 200, nullable: false),
                     Bio = table.Column<string>(maxLength: 4000, nullable: true),
-                    Website = table.Column<string>(maxLength: 1000, nullable: true)
+                    WebSite = table.Column<string>(maxLength: 1000, nullable: true)
                 },
                 constraints: table =>
                 {

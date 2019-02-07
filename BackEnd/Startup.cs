@@ -13,7 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
-using BackEnd.Models;
+using BackEnd.Data;
 
 namespace BackEnd
 {
@@ -51,9 +51,8 @@ namespace BackEnd
         {
             app.UseSwagger();
             app.UseSwaggerUI(options =>
-            {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Conference Planner API v1");
-            });
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Conference Planner API v1")
+            );
 
             if (env.IsDevelopment())
             {
